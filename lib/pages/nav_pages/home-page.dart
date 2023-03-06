@@ -111,32 +111,44 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               ],
             ),
           ),
-          SizedBox(height: 20,),
+          SizedBox(height: 10,),
           Container(
             width: double.maxFinite,
             height: 100,
             margin: const EdgeInsets.only(left: 20),
             child: ListView.builder(
               itemCount: 4,
+              scrollDirection: Axis.horizontal,
               itemBuilder: (_, index){
-              return Column(
-                children: [
-                  Container(
-                      margin: const EdgeInsets.only(right: 50),
-                      width: 80,
-                      height: 80,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.white,
-                        image: DecorationImage(
-                          image: AssetImage(
-                            'img/montain.jpeg'
+              return Container(
+                margin: const EdgeInsets.only(right: 30),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Container(
+                        margin: const EdgeInsets.only(right: 50),
+                        width: 80,
+                        height: 80,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: Colors.white,
+                          image: DecorationImage(
+                            image: AssetImage(
+                              'img/montain.jpeg'
+                            ),
+                            fit: BoxFit.cover,
                           ),
-                          fit: BoxFit.cover,
                         ),
                       ),
+                    Container(
+                      child: AppText(
+                        text: 'hi',
+                        color: AppColors.textColor2,
+                      ),
                     )
-                ],
+                  ],
+                ),
+                
               );
             }),
           ),

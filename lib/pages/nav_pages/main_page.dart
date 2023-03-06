@@ -45,11 +45,29 @@ class _MainPageState extends State<MainPage> {
         showUnselectedLabels: false,
         elevation: 0,
         items: [
-          BottomNavigationBarItem(title: Text('Home'), icon: Icon(Icons.apps)),
-          BottomNavigationBarItem(title: Text('Bar'), icon: Icon(Icons.bar_chart_sharp)),
-          BottomNavigationBarItem(title: Text('Search'), icon: Icon(Icons.search)),
-          BottomNavigationBarItem(title: Text('My'), icon: Icon(Icons.person)),
+          BottomNavigationBarItem(
+            label: 'Home',
+            icon: Icon(Icons.apps),
+          ),
+          BottomNavigationBarItem(
+            label: 'Bar',
+            icon: Icon(Icons.bar_chart_sharp),
+          ),
+          BottomNavigationBarItem(
+            label: 'Search',
+            icon: Icon(Icons.search),
+          ),
+          BottomNavigationBarItem(
+            label: 'Account',
+            icon: Icon(Icons.person),
+          ),
         ],
+        // items: [
+        //   BottomNavigationBarItem(title: Text('Home'), icon: Icon(Icons.apps)),
+        //   BottomNavigationBarItem(title: Text('Bar'), icon: Icon(Icons.bar_chart_sharp)),
+        //   BottomNavigationBarItem(title: Text('Search'), icon: Icon(Icons.search)),
+        //   BottomNavigationBarItem(title: Text('My'), icon: Icon(Icons.person)),
+        // ],
       ),
     );
   }
