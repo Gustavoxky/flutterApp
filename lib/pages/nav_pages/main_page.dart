@@ -1,4 +1,3 @@
-import 'package:eu/pages/Home_Page.dart';
 import 'package:eu/pages/nav_pages/bar_item_page.dart';
 import 'package:eu/pages/nav_pages/my_page.dart';
 import 'package:eu/pages/nav_pages/search_page.dart';
@@ -6,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:cupertino_icons/cupertino_icons.dart';
+
+import 'home-page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});

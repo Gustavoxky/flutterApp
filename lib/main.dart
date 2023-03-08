@@ -1,4 +1,3 @@
-import 'package:eu/pages/Home_Page.dart';
 import 'package:eu/pages/Welcome_page.dart';
 import 'package:eu/pages/nav_pages/main_page.dart';
 import 'package:flutter/material.dart';

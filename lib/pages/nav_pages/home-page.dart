@@ -14,6 +14,12 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
+  var images = {
+    'balloning.png': 'Balloning',
+    'hiking.png': 'Hiking',
+    'kayaking.png': 'Kaiaking',
+    'snorking.png': 'Snorking',
+  };
   @override
   Widget build(BuildContext context) {
     TabController _tabController = TabController(length: 3, vsync: this);
@@ -39,17 +45,17 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               ],
             ),
           ),
-          SizedBox(height: 40,),
+          SizedBox(height: 30,),
           Container(
             margin: const EdgeInsets.only(left: 20),
             child: AppLargeText(text: 'Discover'),
           ),
-          SizedBox(height: 30,),
+          SizedBox(height: 20,),
           Container(
             child: Align (
               alignment: Alignment.centerLeft,
               child: TabBar(
-                labelPadding: const EdgeInsets.only(left: 0, right: 0),
+                labelPadding: const EdgeInsets.only(left: 40, right: 40),
                 labelColor: Colors.black,
                 unselectedLabelColor: Colors.grey,
                 isScrollable: true,
@@ -86,7 +92,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                         color: Colors.white,
                         image: DecorationImage(
                           image: AssetImage(
-                            'img/montain.jpeg'
+                            'img/mountain.jpeg'
                           ),
                           fit: BoxFit.cover,
                         ),
@@ -114,7 +120,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           SizedBox(height: 10,),
           Container(
             width: double.maxFinite,
-            height: 100,
+            height: 120,
             margin: const EdgeInsets.only(left: 20),
             child: ListView.builder(
               itemCount: 4,
@@ -134,15 +140,16 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                           color: Colors.white,
                           image: DecorationImage(
                             image: AssetImage(
-                              'img/montain.jpeg'
+                              'img/' + images.keys.elementAt(index), 
                             ),
                             fit: BoxFit.cover,
                           ),
                         ),
                       ),
+                    SizedBox(height: 10,),
                     Container(
                       child: AppText(
-                        text: 'hi',
+                        text: images.values.elementAt(index),
                         color: AppColors.textColor2,
                       ),
                     )
