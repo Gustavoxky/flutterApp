@@ -1,9 +1,9 @@
+import 'package:eu/cubit/app_cubits.dart';
 import 'package:eu/widgets/app_large_text.dart';
 import 'package:eu/widgets/app_text.dart';
 import 'package:eu/widgets/responsive_button.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../misc/colors.dart';
 
@@ -21,7 +21,7 @@ class _WelcomePageState extends State<WelcomePage> {
     'welcome-three.png',
   ];
   List text = [
-    
+
   ];
 
   @override
@@ -62,7 +62,15 @@ class _WelcomePageState extends State<WelcomePage> {
                         ),
                       ),
                       SizedBox(height: 40,),
-                      ResponsiveButton(width: 120,)
+                      GestureDetector(
+                        onTap: () {
+                          BlocProvider.of<AppCubits>(context).GetData();
+                        },
+                        child: Container(
+                          width: 200,
+                          child: Row(children: [ResponsiveButton(width: 120,)],)
+                        ),
+                      )
                     ],
                   ),
                   Column(
@@ -77,7 +85,7 @@ class _WelcomePageState extends State<WelcomePage> {
                         ),
                       );
                     })
-                    
+
                   )
                 ],
               ),

@@ -1,4 +1,5 @@
 import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class AppColors {
@@ -8,7 +9,7 @@ class AppColors {
   static final Color mainColor = Color(0xFF5d69b3);
   static final Color starColor = Color(0xFFe7bb4e);
   static final Color mainTextColor = Color(0xFFababad);
-  static final Color buttonBackgroun = Color(0xFFf1f2f1);
-  
-  
+  static final Color buttonBackground = Color(0xFFf1f2f1);
+
+
 }
